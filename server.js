@@ -1,7 +1,7 @@
 import express from 'express';
 import globalMiddleware from './src/middleware/global.js';
 import Path from 'path';
-import routes from './src/routes/router.js';
+import routes from './src/routes/routes/router.js';
 import pkg from './package.json' with { type: 'json' };
 import { fileURLToPath } from 'url';
 import { initializeDatabase } from './src/models/db-in-file.js';
