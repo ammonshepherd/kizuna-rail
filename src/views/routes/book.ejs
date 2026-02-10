@@ -32,7 +32,7 @@
                                 <div class="ticket-header">
                                     <h3 class="ticket-name"><%= ticket.name %></h3>
                                     <div class="ticket-price">
-                                        <span class="price-symbol">¥</span>
+                                        <span class="price-symbol">$</span>
                                         <span class="price-amount"><%= Number(ticket.price).toLocaleString() %></span>
                                     </div>
                                 </div>
@@ -204,9 +204,9 @@
 
     const updateSummary = () => {
         passengerCountDisplay.textContent = passengerCount;
-        pricePerTicket.textContent = `¥${ticketPrice.toLocaleString()}`;
+        pricePerTicket.textContent = `$${ticketPrice.toLocaleString()}`;
         const total = ticketPrice * passengerCount;
-        totalAmount.textContent = `¥${total.toLocaleString()}`;
+        totalAmount.textContent = `$${total.toLocaleString()}`;
     };
 
     const updatePassengerNumbers = () => {
