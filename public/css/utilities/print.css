@@ -1,0 +1,23 @@
+@media print {
+    header, footer, .confirmation-actions, .success-icon, .confirmation-message, .detail-icon {
+        display: none !important;
+    }   
+    * {
+        padding: 1px !important;
+        margin: 1px !important;
+        border: none !important;
+        line-height: .9;
+        gap: 0px !important;
+        page-break-after: avoid !important;
+        page-break-before: avoid !important;
+
+    }
+    ul li {
+        padding-left: 15px !important;
+    }
+    html, body {
+        height: auto !important;
+        width: 89% !important;
+        margin: auto !important;
+    }
+}

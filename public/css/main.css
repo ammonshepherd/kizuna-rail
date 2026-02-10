@@ -15,3 +15,5 @@
 @import 'components/columns-grid.css' layer(components);
 
 @import 'layout/all-layouts.css' layer(layout);
+
+@import 'utilities/print.css' layer(utilities);
