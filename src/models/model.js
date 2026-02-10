@@ -1,5 +1,6 @@
 import { generateConfirmationCode } from '../includes/helpers.js';
 import { getDb as db } from './db-in-file.js';
+import { convertNumToMonth } from '../middleware/global.js';
 
 // ROUTE MODEL FUNCTIONS
 
@@ -18,7 +19,14 @@ export const getListOfSeasons = async () => {
 };
 
 export const getRouteById = async (routeId) => {
-    return db().routes.find(route => route.id == routeId) || null;
+    const theRoute = db().routes.find(route => route.id == routeId) || null;
+
+    // Modify the numbers to month names
+    theRoute.operatingMonths.forEach((num, index, array) => {
+        array[index] = convertNumToMonth(num);
+    });
+        
+    return theRoute;
 };
 
 export const getRoutesByRegion = async (region) => {
